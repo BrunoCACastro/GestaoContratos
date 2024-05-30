@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style.css">
     <script>
         function submitForm(event) {
-            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            event.preventDefault();
             var form = document.getElementById('cadastroForm');
             var formData = new URLSearchParams(new FormData(form)).toString();
 
@@ -63,7 +63,6 @@
             String valor = request.getParameter("valor");
             String contratoId = request.getParameter("contratoId");
 
-            // Validação dos parâmetros
             boolean hasError = false;
             StringBuilder errorMessage = new StringBuilder();
 

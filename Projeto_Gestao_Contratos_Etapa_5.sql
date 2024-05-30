@@ -4,10 +4,6 @@ USE Projeto_Gestao_Contratos_Etapa_5;
 
 SHOW TABLES;
 
-DESCRIBE CONTRATOS;
-
-SELECT * FROM CONTRATOS;
-
 CREATE TABLE Contratos (
   id_contrato INT NOT NULL AUTO_INCREMENT,
   nome_contrato VARCHAR(100) NOT NULL,

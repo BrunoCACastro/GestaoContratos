@@ -18,20 +18,17 @@
     <h1>Verificação da conexão com o Banco de Dados</h1>
 
     <%
-        // Configurações do banco de dados
         String url = "jdbc:mysql://localhost:3306/Projeto_Gestao_Contratos_Etapa_5";
         String usuario = "root";
         String senha = "=senaCEad2022";
         String mensagem = "";
 
-        // Carregar o driver JDBC do MySQL
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             mensagem = "Erro ao carregar o driver JDBC: " + e.getMessage();
         }
 
-        // Verificar conexão com o banco de dados
         if (mensagem.isEmpty()) {
             try (Connection connection = DriverManager.getConnection(url, usuario, senha)) {
                 if (connection != null) {
@@ -44,7 +41,6 @@
             }
         }
 
-        // Exibir a mensagem de verificação
         out.println("<p>" + mensagem + "</p>");
     %>
 </body>

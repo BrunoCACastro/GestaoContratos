@@ -54,7 +54,6 @@
             String dataInicio = request.getParameter("dataInicio");
             String dataTermino = request.getParameter("dataTermino");
 
-            // Verificação para depuração
             out.println("<p>nomeContrato: " + nomeContrato + "</p>");
             out.println("<p>descricaoContrato: " + descricaoContrato + "</p>");
             out.println("<p>dataInicio: " + dataInicio + "</p>");
